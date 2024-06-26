@@ -1,0 +1,30 @@
+body{
+    direction:rtl;
+}
+
+nav{    height: 40%;
+    background-color: antiquewhite;
+}
+header ul{
+   display: flex;
+   justify-content: center;
+}
+header ul li{
+    list-style: none;
+    cursor: pointer;
+    padding: 10px ;
+    margin-top: 10px;
+
+}
+.changeBgTitle{
+    width: 40%;
+    height: 40px;
+    text-align: center;
+    margin-right: 10px;
+    border-radius: 7%;
+    border: 1px solid green;
+    -webkit-border-radius: 7%;
+    -moz-border-radius: 7%;
+    -ms-border-radius: 7%;
+    -o-border-radius: 7%;
+}
