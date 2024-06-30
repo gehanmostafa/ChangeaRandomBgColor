@@ -1,0 +1,40 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation Emojy</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+     .parent{
+     
+     }
+        .leftRandom{
+            left: 100;
+             animation:  animation 3s 1 linear forwards;
+          position: fixed;
+         
+   
+        }
+        button{
+            margin: 100px;
+            cursor: pointer;
+         
+        }
+        @keyframes animation {
+            0% {
+                transform: translateY(10vw);
+            }
+            100%{
+                transform: translateY(300vw);
+            }
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="parent">
+    </div>
+    <button > Click Here</button>
+    <script src="main.js"></script>
+</body>
+</html>
