@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Model</title>
+  <style>
+    body{
+       
+         margin: auto;
+         width: 80%;
+         text-align: center;
+         
+    }
+      .overlay{
+         position: absolute;
+         top: 0;
+         left: 0;
+         right: 0;
+         bottom: 0;
+         width: 100%;
+         height: 100%;
+         z-index: ;
+         background-color: rgba(28, 23, 12, 0.987);
+    }
+    button{
+        background-color: rgba(10, 10, 10, 0.966);
+        padding: 20px;
+        color: aliceblue;
+        border: 0;
+        border-radius: 20px;
+        cursor: pointer;
+        z-index: 100;
+    }
+    .content-model{
+         position: absolute;
+        background-color: cadetblue;
+    }
+    .hidden{
+        display: none;
+    }
+  </style>
+</head>
+<body>
+    <button class="btnShowModel">Show Model</button>
+    <div class="overlay hidden">  
+    </div>
+    <div class="content-model hidden">
+        <button id="btnCloes">x</button>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dicta optio, ipsa error expedita provident repellat officia sed odit, explicabo dolor illum quia non vero voluptatem molestiae doloremque in, veritatis nam?</p>
+    </div>
+    <script>
+        let btnShowModel = document.querySelector(".btnShowModel")
+        let btnCloes = document.getElementById("btnCloes");
+        let contentModel  = document.querySelector(".content-model ")
+        let overlay  = document.querySelector(".overlay ");
+        let hiddenModel =  () => {
+            overlay.classList.add("hidden")
+    contentModel.classList.add("hidden")
+    }
+        btnShowModel.addEventListener("click" ,
+    () => {
+      overlay.classList.remove("hidden")
+    contentModel.classList.remove("hidden")
+    }
+    );
+    overlay.addEventListener("click" , hiddenModel)
+    btnCloes.addEventListener("click" ,hiddenModel)
+ document.addEventListener("keydown" , function(e){
+     if(e.key==="Escape" && !overlay.classList.contains("hidden")){
+        hiddenModel()
+     }
+    
+ })
+    </script>
+</body>
+</html>
